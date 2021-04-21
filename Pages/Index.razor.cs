@@ -30,7 +30,7 @@ namespace AntDesignBlazorTableSortOrder.Pages
             Items = SwapSortOrders(Items, index, newIndex);
 
             // This won't work
-            //Items.Swap(index, newIndex);
+            //Items.SwapSortOrders(index, newIndex);
         }
 
         private void SortDown(Guid id)
