@@ -1,0 +1,9 @@
+﻿@page "/"
+
+<h1>The Witcher Books</h1>
+
+<Table DataSource="Items" Context="tableContext" HidePagination="@true" PageSize="10">
+    <Column DataIndex="@nameof(tableContext.Name)" TData="string" Title="Name"></Column>
+    <Column DataIndex="@nameof(tableContext.SortOrder)" TData="int" Title="Sort Order"></Column>
+    <ActionColumn Title="Sort"><Button OnClick="()=> SortUp(tableContext.Id)" Type="link">Up</Button> <Button OnClick="()=> SortDown(tableContext.Id)" Type="link">Down</Button></ActionColumn>
+</Table>
