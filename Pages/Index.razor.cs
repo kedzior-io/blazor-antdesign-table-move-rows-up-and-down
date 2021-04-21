@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using AntDesignBlazorTableSortOrder.Extensions;
 
 namespace AntDesignBlazorTableSortOrder.Pages
 {
@@ -27,6 +28,9 @@ namespace AntDesignBlazorTableSortOrder.Pages
             var newIndex = index - 1;
 
             Items = SwapSortOrders(Items, index, newIndex);
+
+            // This won't work
+            //Items.Swap(index, newIndex);
         }
 
         private void SortDown(Guid id)
@@ -42,6 +46,9 @@ namespace AntDesignBlazorTableSortOrder.Pages
             var newIndex = index + 1;
 
             Items = SwapSortOrders(Items, index, newIndex);
+
+            // This won't work
+            //Items.Swap(index, newIndex);
         }
 
         public static List<Item> SwapSortOrders(List<Item> list, int indexA, int indexB)
